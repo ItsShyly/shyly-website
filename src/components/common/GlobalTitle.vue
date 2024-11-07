@@ -8,9 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <nav>
-    <h1>{{ brand }}</h1>
-  </nav>
+  <h1>{{ brand }}</h1>
 </template>
 
 <style></style>
