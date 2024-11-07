@@ -1,17 +1,10 @@
 <script setup lang="ts">
-import Navbar from "@/components/common/navbar.vue";
-
+import Navbar from '@/components/common/GlobalNavbar.vue'
 </script>
 
 <template>
   <header>
-    <Navbar brand="shyly"/>
+    <Navbar brand="shyly" />
   </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <main></main>
 </template>
-
-<style scoped>
-</style>
