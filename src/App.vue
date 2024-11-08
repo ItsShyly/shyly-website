@@ -2,6 +2,9 @@
 <script setup lang="ts">
 import Menu from '@/components/common/GlobalMenu.vue'
 import Title from '@/components/common/GlobalTitle.vue'
+
+import '@scss/main.scss'
+
 import { RouterView } from 'vue-router'
 </script>
 

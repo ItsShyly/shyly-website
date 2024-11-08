@@ -14,7 +14,9 @@ const config: UserConfig = {
   css: {
     preprocessorOptions: {
       scss: {
-        additionalData: `@use "@scss/variables";`,
+        additionalData: `
+        @use '@scss/index' as *;
+        `,
       },
     },
   },
