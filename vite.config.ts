@@ -1,23 +1,23 @@
 import { fileURLToPath, URL } from 'node:url'
-import { defineConfig } from 'vite'
+import { UserConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
 // https://vite.dev/config/
-export default defineConfig({
+const config: UserConfig = {
   plugins: [vue()],
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@scss': fileURLToPath(new URL('./src/assets/scss', import.meta.url)),
     },
   },
   css: {
     preprocessorOptions: {
-      sass: {
-        additionalData: `@use "@/assets/scss/variables" as *;"`,
-      },
       scss: {
-        additionalData: `@use "@/assets/scss/variables" as *;`,
+        additionalData: `@use "@scss/variables"`,
       },
     },
   },
-})
+}
+
+export default config
