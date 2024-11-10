@@ -1,0 +1,76 @@
+@use 'sass:color';
+
+// ! - ! - Colors  - ! - !
+
+// Grayscale
+$grayscale0: #ffffff;
+$grayscale1000: #000000;
+
+// Base Colors
+$pink: #ff00fb; // pink500
+$blue: #00d4ff; // blue500
+$purple: #4d00ff; // purple500
+$text: $grayscale0;
+
+$grayscale100: color.adjust($grayscale0, $lightness: 10%);
+$grayscale200: color.adjust($grayscale0, $lightness: 20%);
+$grayscale300: color.adjust($grayscale0, $lightness: 30%);
+$grayscale400: color.adjust($grayscale0, $lightness: 40%);
+$grayscale500: color.adjust($grayscale0, $lightness: 50%);
+$grayscale600: color.adjust($grayscale1000, $lightness: 40%);
+$grayscale700: color.adjust($grayscale1000, $lightness: 30%);
+$grayscale800: color.adjust($grayscale1000, $lightness: 20%);
+$grayscale900: color.adjust($grayscale1000, $lightness: 10%);
+$grayscale950: color.adjust($grayscale1000, $lightness: 5%);
+$grayscale990: color.adjust($grayscale1000, $lightness: 3%);
+
+// Pink Scales
+$pink50: color.adjust($pink, $lightness: 20%);
+$pink100: color.adjust($pink, $lightness: 15%);
+$pink200: color.adjust($pink, $lightness: 10%);
+$pink300: color.adjust($pink, $lightness: 5%);
+$pink400: color.adjust($pink, $lightness: -5%);
+$pink500: $pink;
+$pink600: color.adjust($pink, $lightness: -10%);
+$pink700: color.adjust($pink, $lightness: -15%);
+$pink800: color.adjust($pink, $lightness: -20%);
+$pink900: color.adjust($pink, $lightness: -25%);
+$pink950: color.adjust($pink, $lightness: -30%);
+
+// Blue Scales
+$blue50: color.adjust($blue, $lightness: 20%);
+$blue100: color.adjust($blue, $lightness: 15%);
+$blue200: color.adjust($blue, $lightness: 10%);
+$blue300: color.adjust($blue, $lightness: 5%);
+$blue400: color.adjust($blue, $lightness: -5%);
+$blue500: $blue;
+$blue600: color.adjust($blue, $lightness: -10%);
+$blue700: color.adjust($blue, $lightness: -15%);
+$blue800: color.adjust($blue, $lightness: -20%);
+$blue900: color.adjust($blue, $lightness: -25%);
+$blue950: color.adjust($blue, $lightness: -30%);
+
+// Purple Scales
+$purple50: color.adjust($purple, $lightness: 20%);
+$purple100: color.adjust($purple, $lightness: 15%);
+$purple200: color.adjust($purple, $lightness: 10%);
+$purple300: color.adjust($purple, $lightness: 5%);
+$purple400: color.adjust($purple, $lightness: -5%);
+$purple500: $purple;
+$purple600: color.adjust($purple, $lightness: -10%);
+$purple700: color.adjust($purple, $lightness: -15%);
+$purple800: color.adjust($purple, $lightness: -20%);
+$purple900: color.adjust($purple, $lightness: -25%);
+$purple950: color.adjust($purple, $lightness: -30%);
+
+// ! - ! - Fonts - ! - !
+
+// Sizes
+$fs-title: 100px;
+$fs-button: 30px;
+$fs-text: 20px;
+
+// Phone sizes with 30% reduction
+$fs-title-phone: $fs-title * (1 - 0.3); // 70px
+$fs-button-phone: $fs-button * (1 - 0.3); // 21px
+$fs-text-phone: $fs-text * (1 - 0.3); // 15px

@@ -1,0 +1,98 @@
+//Menu selection
+
+.menu-wrapper {
+  @include full-width-box(25vh, 100%, $grayscale950);
+  @include flex-center();
+  flex-wrap: wrap;
+  padding: 10px;
+
+  @include media(768px) {
+    padding: 5px;
+  }
+}
+
+.menu-grid {
+  @include full-width-box(100%, 90%, $grayscale950);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  justify-items: center;
+  align-items: center;
+
+  @include media(768px, 'portrait') {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+  }
+
+  @include media(350px) {
+    grid-template-columns: 1fr;
+    gap: 5px;
+    overflow-y: scroll;
+    @include scrollbar();
+  }
+}
+
+.menu-frame {
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  border-radius: 15px;
+  background-color: $grayscale800;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  @include media(700px) {
+    border-radius: 5px;
+  }
+
+  .menu-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    color: $grayscale900;
+    text-decoration: none;
+    font-size: $fs-button;
+
+    @include media(768px) {
+      font-size: $fs-button-phone;
+    }
+  }
+}
+
+// Holes / look
+
+.hole-container {
+  @include full-width-box(5vh, 100%, $grayscale950);
+  @include flex-center();
+
+  @include media(768px) {
+    @include full-width-box(7vh, 100%, $grayscale950);
+  }
+}
+
+.hole-outer {
+  @include flex-center(row);
+  justify-content: space-evenly;
+  width: 5vh;
+  height: 100%;
+
+  @include media(768px) {
+    width: 7vh;
+  }
+}
+
+.hole {
+  background-color: $grayscale900;
+  width: 35%;
+  height: 40%;
+  border-radius: 15%;
+
+  @include media(768px) {
+    width: 50%;
+    height: 45%;
+  }
+}
