@@ -1,10 +1,17 @@
+<!-- src/App.vue -->
 <script setup lang="ts">
-import Navbar from '@/components/common/GlobalNavbar.vue'
+import Menu from '@/components/common/GlobalMenu.vue'
+import Title from '@/components/common/GlobalTitle.vue'
+
+import '@scss/main.scss'
+
+import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <header>
-    <Navbar brand="shyly" />
-  </header>
-  <main></main>
+  <Title brand="shyly" />
+  <Menu />
+  <RouterView />
 </template>
+
+<style scoped></style>

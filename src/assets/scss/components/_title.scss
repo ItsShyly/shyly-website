@@ -1,0 +1,12 @@
+.title-outer {
+  @include full-width-box(65vh, 100vw, $grayscale990);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.title-text {
+  text-align: center;
+  font-size: 100px;
+  color: $text;
+}

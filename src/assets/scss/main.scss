@@ -1,9 +1,9 @@
 // Base styles
-@use 'base/globals';
-@use 'base/mixins';
+@import 'base/globals';
 
 // Layout styles
-@use 'layout/footer';
+@import 'layout/footer';
 
 // Component styles
-@use 'components/navbar';
+@import 'components/title';
+@import 'components/menu';
