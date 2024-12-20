@@ -1,5 +1,17 @@
 //Menu selection
 
+.component-container {
+  width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  pointer-events: auto;
+  position: absolute;
+}
+
 .menu-wrapper {
   @include full-width-box(25vh, 100%, $grayscale950);
   @include flex-center();
@@ -36,15 +48,27 @@
   width: 100%;
   height: 100%;
   max-width: none;
+  border: 2px solid transparent;
   border-radius: 15px;
   background-color: $grayscale800;
   margin: 5px;
   display: flex;
   justify-content: center;
   flex-direction: column;
+  transition: 20ms;
+  overflow: hidden;
+  display: inline-block;
 
   @include media(700px) {
     border-radius: 5px;
+  }
+
+  &:hover {
+    // Corrected hover syntax
+    border: 2px solid $pink;
+    box-shadow:
+      $pink100 0px 0px 60px -12px inset,
+      $pink100 0px 0px 36px -18px inset;
   }
 
   .menu-action {
@@ -68,10 +92,6 @@
 .hole-container {
   @include full-width-box(5vh, 100%, $grayscale950);
   @include flex-center();
-
-  @include media(768px) {
-    @include full-width-box(7vh, 100%, $grayscale950);
-  }
 }
 
 .hole-outer {
@@ -79,20 +99,34 @@
   justify-content: space-evenly;
   width: 5vh;
   height: 100%;
-
-  @include media(768px) {
-    width: 7vh;
-  }
 }
 
 .hole {
   background-color: $grayscale900;
-  width: 35%;
+  width: 50%;
   height: 40%;
   border-radius: 15%;
+}
 
-  @include media(768px) {
-    width: 50%;
-    height: 45%;
-  }
+.show-menu-button {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: $grayscale990;
+  color: $grayscale500;
+  font-size: 24px;
+  width: 100px;
+  height: 40px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: auto;
+}
+
+.show-menu-button:hover {
+  background-color: $pink;
 }
