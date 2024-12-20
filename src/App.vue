@@ -1,17 +1,36 @@
-<!-- src/App.vue -->
 <script setup lang="ts">
-import Menu from '@/components/common/GlobalMenu.vue'
-import Title from '@/components/common/GlobalTitle.vue'
+import { ref, watch } from 'vue'
+import { useRoute } from 'vue-router'
+import { defineAsyncComponent } from 'vue'
 
 import '@scss/main.scss'
 
-import { RouterView } from 'vue-router'
+const isHome = ref(false)
+const route = useRoute()
+
+// Watch for changes in the route's name
+watch(
+  () => route.name,
+  (newRoute) => {
+    // Set isHome based on the route name
+    isHome.value = newRoute === 'home'
+  },
+)
+
+// async the menu
+const Menu = defineAsyncComponent(() => import('@/components/common/GlobalMenu.vue'))
 </script>
 
 <template>
-  <Title brand="shyly" />
-  <Menu />
+  <Menu :is-home="isHome" class="menu" />
   <RouterView />
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.menu {
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  pointer-events: none;
+}
+</style>
